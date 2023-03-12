@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-theme">
+<head>
+    <title>Kharto - How to play ?</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://defferrard.dev/kharto/">
+    <meta property="og:title" content="Kharto - How to play ?">
+    <meta property="og:description" content="Learn how to play at Kharto !">
+    <meta property="og:image" content="https://defferrard.dev/kharto/img/poster.svf">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@KharamelMM">
+    <meta name="twitter:title" content="Kharto - How to play ?">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+          rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    <script src="js/audio_theme.js"></script>
+
+</head>
+<body style="overflow: auto;">
+<div class="parameters">
+    <span class="material-icons-round md-45 volume">
+        volume_off
+    </span>
+    <span class="material-icons-round md-45 theme-swapper">
+        dark_mode
+    </span>
+</div>
+<h1>Kharto - How to play ? </h1>
+<div class="page">
+    <div class="flex-container" style="align-items: flex-start; gap: 40px;">
+        <div style="width: min-content;flex-grow: 10;min-width:500px;">
+            <h2>About the Game</h2>
+            <ul>
+                <li><b>Number of players :</b> 2</li>
+                <li><b>Duration :</b> 10-20 minutes</li>
+            </ul>
+            <h2>Introduction</h2>
+            <div>Kharto is inspired by Quarto, a board game for two players invented by a Swiss mathematician <b>Blaise
+                Müller</b> edited in 1991 by <a href="https://www.gigamic.com/">Gigamic</a>.
+            </div>
+            <br/>
+            <div>
+                The game is played on a 4×4 board with 16 unique pieces. Players take turns choosing a piece which the
+                other player must then place on the board. A player wins by placing a piece on the board which forms a
+                horizontal, vertical, or diagonal row of four pieces, all of which have a common attribute (all small,
+                all circular, etc.).
+            </div>
+            <h2>Components</h2>
+            <ul>
+                <li>A 4×4 board</li>
+                <li>16 different pieces with 4 different attributes</li>
+            </ul>
+
+            <h2>Game Play</h2>
+            <ul>
+                <li>The first player chooses a piece from the 16 available pieces, and gives it to his opponent.</li>
+                <li>The latter places the chosen piece on the board, then chooses a piece from the 15 remaining
+                    pieces.
+                </li>
+                <li>On his turn, the first player places the second player's piece on the board, and starts the round
+                    again.
+                </li>
+            </ul>
+
+            <h2>End of the game</h2>
+            <ul>
+                <li>The first player to line up 4 pieces which share the same attribute win.</li>
+                <li>When all the pieces have been place, and there's no winner, it's a tie.</li>
+            </ul>
+        </div>
+        <div style="width: min-content;flex-grow: 10;min-width:500px;">
+            <h2>Pieces Attributes</h2>
+            <div>Each piece own <b>4 attributes</b>:</div>
+            <ul>
+                <li><b>Color</b> (Light or Dark)</li>
+                <li><b>Shape</b> (Round or Square)</li>
+                <li><b>Size</b> (Big or Small)</li>
+                <li><b>Content</b> (Solid or Hollow)</li>
+            </ul>
+            <div>Examples :</div>
+            <br/>
+            <div style="display: flex;align-items: center;gap: 20px;margin-left: 20px;">
+                <img src="img/kharto/black_solid.svg" style="width: 50px; border-radius:5%;"/>
+                <b>Dark</b> - <b>Square</b> - <b>Big</b> - <b>Solid</b>
+            </div>
+            <br/>
+            <div style="display: flex;align-items: center;gap: 20px;margin-left: 20px;">
+                <img src="img/kharto/white_square_hole.svg" style="width: 50px; border-radius:5%;"/>
+                <b>Light</b> - <b>Square</b> - <b>Big</b> - <b>Hollow</b>
+            </div>
+            <br/>
+            <div style="display: flex;align-items: center;gap: 20px;margin-left: 20px;">
+                <span style="width: 50px;">
+                <img src="img/kharto/white_cylinder_hole.svg"
+                     style="width: 30px; border-radius:50%;margin:auto;display: block;"/>
+                </span>
+                <b>Light</b> - <b>Round</b> - <b>Small</b> - <b>Hollow</b>
+            </div>
+
+
+            <h2>In Game Elements</h2>
+            <a href="img/kharto/board_legends.png"><img src="img/kharto/board_legends.png" id="board-legends"
+                                                        style="width: 90%;"/></a>
+            <ol>
+                <li>Available pieces that can still be played.</li>
+                <li>4×4 Board containing all placed pieces.</li>
+                <li>Chosen piece, to be placed on the board.</li>
+                <li>Turn Indicator</li>
+                <li>What you have to do..</li>
+                <li>Audio / Display parameters.</li>
+            </ol>
+        </div>
+    </div>
+    <div class="flex-container" style="align-items: center; gap: 40px;min-width:500px;">
+        <div style="width: min-content;flex-grow: 10;min-width:500px;">
+            <h2>Sources</h2>
+            <div>
+                <a href="https://en.wikipedia.org/wiki/Quarto_(board_game)">Quarto (board game) - Wikipedia</a><br/>
+                <a href="https://www.ultraboardgames.com/quarto/game-rules.php">Quarto! Game Rules - UltraBoardGames</a>
+            </div>
+        </div>
+        <div style="width: min-content; flex-grow: 10; min-width:500px;text-align: center;">
+            <div style="display: flex; align-items: center; gap: 20px; margin: auto;width: fit-content;">
+            <div>This website is powered by <a href="https://github.com/KharamelMM">Kharamel</a></div>
+            <a href="https://github.com/KharamelMM"><img src="img/kharamel.png" style="width: 75px"/></a>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+</div>
+
+<a class="rules" href="../">Go back to play !</a>
+
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html class="dark-theme">
+<head>
+    <title>Kharto !</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://khatro.herokuapp.com/">
+    <meta property="og:title" content="You've been invited to play at Kharto.">
+    <meta property="og:description" content="Come and crush your opponent !">
+    <meta property="og:image" content="https://khatro.herokuapp.com/img/poster.svf">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@KharamelMM">
+    <meta name="twitter:title" content="Kharto - Online Game">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+          rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    <script src="js/audio_theme.js"></script>
+</head>
+<!--
+           _
+       .__(.)< (MEOW)
+        \___)
+ ~~~~~~~~~~~~~~~~~~-->
+<body>
+<div class="parameters">
+    <span class="material-icons-round md-45 language">
+        language
+        <div>EN</div>
+    </span>
+    <span class="material-icons-round md-45 volume">
+        volume_off
+    </span>
+    <span class="material-icons-round md-45 theme-swapper">
+        dark_mode
+    </span>
+    <span class="material-icons-round md-45 check">
+        done
+    </span>
+    <span class="material-icons-round md-45 timer">
+        timer_off
+    </span>
+</div>
+
+<div class="friend-invite">
+    <div>
+        <div>Click below to copy URL,</div>
+        <div>and share it with your friend !</div>
+        <button class="code-container hidden">
+            <span class="code"></span>
+        </button>
+        <div class="hidden" id="copied">Copied !</div>
+    </div>
+</div>
+<div class="game-over hidden">
+    You won !
+</div>
+
+<a class="rules" href="./rules" target="_blank">How to play ?</a>
+<h1 id="messages">Waiting for an opponent to join...</h1>
+<div class="board">
+    <div class="flex-start"></div>
+    <div class="available-tokens flex-container">
+        <div class="flex-container col0">
+        </div>
+        <div class="flex-container col1">
+        </div>
+    </div>
+    <div class="placed-tokens">
+        <table>
+            <tr>
+                <td>
+                    <button id="a0" disabled="true"></button>
+                </td>
+                <td>
+                    <button id="a1" disabled="true"></button>
+                </td>
+                <td>
+                    <button id="a2" disabled="true"></button>
+                </td>
+                <td>
+                    <button id="a3" disabled="true"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="b0" disabled="true"></button>
+                </td>
+                <td>
+                    <button id="b1" disabled="true"></button>
+                </td>
+                <td>
+                    <button id="b2" disabled="true"></button>
+                </td>
+                <td>
+                    <button id="b3" disabled="true"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="c0" disabled="true"></button>
+                </td>
+                <td>
+                    <button id="c1" disabled="true"></button>
+                </td>
+                <td>
+                    <button id="c2" disabled="true"></button>
+                </td>
+                <td>
+                    <button id="c3" disabled="true"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="d0" disabled="true"></button>
+                </td>
+                <td>
+                    <button id="d1" disabled="true"></button>
+                </td>
+                <td>
+                    <button id="d2" disabled="true"></button>
+                </td>
+                <td>
+                    <button id="d3" disabled="true"></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="chosen-token-container flex-container flex-column">
+        <button id="chosen-token" disabled="true" value="-1"></button>
+    </div>
+    <div class="flex-end"></div>
+
+</div>
+<h2 id="tip"><br/></h2>
+<button class="rematch hidden">
+    Rematch !
+</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
+<script src="js/kharto.js" defer></script>
+</body>
+</html>
