@@ -13,7 +13,9 @@ const PLAYERS = {};
 /**
  * HTTP Routes
  */
-HTTP.listen(PORT)
+HTTP.listen(PORT, function () {
+    console.log(`Server is running at http://localhost:${PORT}${URL_REPO}`);
+})
 APP.use(URL_REPO, EXPRESS.static('public')) // Expose public directory
     .get(URL_REPO + '/', function (req, res) {
         res.sendFile(__dirname + '/kharto.html');
